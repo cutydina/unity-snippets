@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AdManager : MonoBehaviour
 {
+//Here we can add our AdUnits
     [Header("Ad Unit IDs")]
     [SerializeField] private string adUnitBanner;
     [SerializeField] private string adUnitInterstitial;
@@ -14,8 +15,10 @@ public class AdManager : MonoBehaviour
 
     void Start()
     {
+    // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize((InitializationStatus initStatus) =>
         {
+         // This callback is called once the MobileAds SDK is initialized.
         });
     }
 
