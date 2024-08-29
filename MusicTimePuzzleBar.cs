@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using AC;
 
-public class ScreamPuzzle : MonoBehaviour
+public class MusicTimePuzzleBar : MonoBehaviour
 {
     public BoxCollider2D SafeZone;
     public float speed;
@@ -57,14 +56,12 @@ public class ScreamPuzzle : MonoBehaviour
                 _gameEnded = true;
                 youWin = true;
                 speed = 0f;
-                AC.GlobalVariables.SetPopupValue(4, 1); // win
             }
             else
             {
                 Debug.Log("You lose");
                 _gameEnded = true;
                 youWin = false;
-                AC.GlobalVariables.SetPopupValue(4, 2); // lost
                 Invoke("InitializeGame", 2f); // Wait for 2 seconds before restarting the game
             }
         }
@@ -79,6 +76,5 @@ public class ScreamPuzzle : MonoBehaviour
         _insideSafeZone = false; // Reset safe zone status
         _gameEnded = false; // Reset game status
         youWin = false; // Reset win status
-        AC.GlobalVariables.SetPopupValue(4, 0); // play
     }
 }
