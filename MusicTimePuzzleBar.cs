@@ -8,7 +8,6 @@ public class MusicTimePuzzleBar : MonoBehaviour
     public float speed;
     public float distance = 1f;
     public static bool youWin;
-    GVar ScreamLoud;
 
     private float _startY;
     private float _startTime;
